@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+    <mapper namespace="com.zq.springboot.cloud.dao.PaymentDao">
+    <!--新增payment-->
+    <insert id="addPayment" parameterType="com.zq.springboot.cloud.emit.Payment" useGeneratedKeys="true" keyProperty="id">
+        insert into payment(serial) value (#{serial})
+    </insert>
+
+
+    <!--查询payment，resultMap="BaseResultMap" 数据库字段映射 -->
+     <resultMap id="BaseResultMap" type="com.zq.springboot.cloud.emit.Payment">
+         <id column="id" property="id" jdbcType="BIGINT"/>
+         <id column="serial" property="serial" jdbcType="VARCHAR"/>
+     </resultMap>
+    <select id="getPaymentId" parameterType="int" resultMap="BaseResultMap">
+   <!-- <select id="getPaymentId" resultType="com.zq.springboot.cloud.emit.Payment" parameterType="int">-->
+    select * from payment where id = #{id};
+    </select>
+
+
+ </mapper>

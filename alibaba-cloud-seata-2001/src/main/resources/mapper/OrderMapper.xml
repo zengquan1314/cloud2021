@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zq.alibaba.springboot.cloud.dao.OrderDao">
+    <resultMap id="OrderMap" type="com.zq.alibaba.springboot.cloud.emit.Order">
+        <id column="id" property="id" jdbcType="BIGINT"></id>
+        <result column="user_id" property="userId" jdbcType="BIGINT"></result>
+        <result column="product_id" property="product_id" jdbcType="BIGINT"></result>
+        <result column="count" property="count" jdbcType="BIGINT"></result>
+        <result column="money" property="money" jdbcType="DECIMAL"></result>
+        <result column="status" property="status" jdbcType="BIGINT"></result>
+    </resultMap>
+    <insert id="create">
+     insert  into t_order(id,user_id,product_id,count,money,status)
+                value (null,#{userId},#{product_id},#{count},#{money},0)
+    </insert>
+
+</mapper>

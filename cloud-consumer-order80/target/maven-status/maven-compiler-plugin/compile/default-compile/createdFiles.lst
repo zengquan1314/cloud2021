@@ -1,0 +1,3 @@
+com\zq\springboot\cloud\resttemplateconfig\RestTemplateConfig.class
+com\zq\springboot\cloud\controller\RestTemplateController.class
+com\zq\springboot\cloud\Start_Consumer_80.class

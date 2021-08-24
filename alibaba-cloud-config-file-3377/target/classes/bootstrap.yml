@@ -1,0 +1,15 @@
+server:
+  port: 3377
+
+spring:
+  application:
+    name: alibaba-config-file
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848   #Nacos 服务注册中心地址
+      config:
+        server-addr: localhost:8848   #Nacos 服务配置文件中心地址
+        file-extension:  yaml       #指定在Nacos服务上配置文件的格式
+        group: dev_GROUP            #指定我们配置好的项目分组名字
+        namespace: 7401dd0e-d4db-4f54-ac78-71a8553ea390   #指定我们配置项目空间id编号

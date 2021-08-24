@@ -1,0 +1,5 @@
+com\zq\springboot\cloud\server\Impl\PaymentServerImpl.class
+com\zq\springboot\cloud\dao\PaymentDao.class
+com\zq\springboot\cloud\server\PaymentServer.class
+com\zq\springboot\cloud\Start_Consul_8006.class
+com\zq\springboot\cloud\contorller\PaymentContorller.class
