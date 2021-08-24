@@ -18,6 +18,6 @@ public class OredrController {
     public RestResult add(@RequestBody Order order){
         System.out.println(order);
      //  OderService.insertOrder(order);
-        return new RestResult("200","成功","成功 ");
+        return new RestResult("200","成功","成功1 ");
     }
 }
